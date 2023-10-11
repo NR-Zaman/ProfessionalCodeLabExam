@@ -6,6 +6,8 @@ import java.util.*;
 public class StudentList {
     public static void main(String[]args){
         // check arguments
+        // Aplication termineted and all bugs and debugs
+        
         if(args[0].equals("a"))
         {
             System.out.println("loading data ....");
