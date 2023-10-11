@@ -62,6 +62,8 @@ public class StudentList {
                 s.close();
             }catch(Exception e){}
             System.out.println("Data Loaded.");
+
+            // cann't make handaling case.
         }
 
         else if(args[0].contains("?"))
