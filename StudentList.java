@@ -53,8 +53,9 @@ public class StudentList {
                 );
                 String t = args[0].substring(1);
 
-                // Date Formet df temporary veriable Removed
+                // Date Formet df removed or commented
                 Date d = new Date();
+                // String df = "dd/mm/yyyy-hh:mm:ss a";
                 DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy-hh:mm:ss a";);
                 String fd= dateFormat.format(d);
                 s.write("," +t+ "\nList last updated on"+fd);
@@ -96,6 +97,8 @@ public class StudentList {
             String D = s.readLine();
             char a[] = D.toCharArray();        
             boolean in_word = false;
+
+            // i cant simplyfy count Function
             int count=0;
                 for(char c:a) {
                     if(c ==' ')
