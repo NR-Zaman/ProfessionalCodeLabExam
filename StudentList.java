@@ -12,13 +12,13 @@ public class StudentList {
         {
             System.out.println("loading data ....");
             try {
-                BufferedReader p = new BufferedReader(
+                BufferedReader s = new BufferedReader(
                     new InputStreamReader(
                     new FileInputStream("students.txt") 
                     )
                 );
 
-                String r = p.readLine();
+                String r = s.readLine();
                 String i[] = r.split(","); 
                 for (String j:i) {System.out.println(j);}
             }
@@ -52,9 +52,10 @@ public class StudentList {
                     new FileWriter("students.txt", true)
                 );
                 String t = args[0].substring(1);
+
+                // Date Formet df temporary veriable Removed
                 Date d = new Date();
-                String df = "dd/mm/yyyy-hh:mm:ss a";
-                DateFormat dateFormat = new SimpleDateFormat(df);
+                DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy-hh:mm:ss a";);
                 String fd= dateFormat.format(d);
                 s.write("," +t+ "\nList last updated on"+fd);
                 s.close();
