@@ -6,12 +6,13 @@ import java.util.*;
 public class StudentList {
     public static void main(String[]args){
         // check arguments
-        if(args[0].equals("a")){
+        if(args[0].equals("a"))
+        {
             System.out.println("loading data ....");
             try {
                 BufferedReader s = new BufferedReader(
                     new InputStreamReader(
-                        new FileInputStream("students.txt") 
+                    new FileInputStream("students.txt") 
                     )
                 );
 
@@ -28,17 +29,20 @@ public class StudentList {
             System.out.println("Loading data ...");        
             try {
             BufferedReader s = new BufferedReader(
-                    new InputStreamReader(
-                            new FileInputStream("students.txt")));
+                new InputStreamReader(
+                new FileInputStream("students.txt")
+                )  
+            );
             String r = s.readLine();
             System.out.println(r);
             String i[] = r.split(",");  
             Random x = new Random();
                 int y = x.nextInt();
-                    System.out.println(i[y]);
+                System.out.println(i[y]);
             } catch (Exception e){}
             System.out.println("Data Loaded.");  
         }
+
         else if(args[0].contains("+")){
             System.out.println("Loading Data ...");
             try {
@@ -55,13 +59,14 @@ public class StudentList {
             }catch(Exception e){}
             System.out.println("Data Loaded.");
         }
+
         else if(args[0].contains("?"))
         {
             System.out.println("Loading Data ... ");
             try{
                 BufferedReader s = new BufferedReader(
                     new InputStreamReader(
-                        new FileInputStream("students.txt")    
+                    new FileInputStream("students.txt")    
                     )
                 );
                 String r = s.readLine();
@@ -89,13 +94,13 @@ public class StudentList {
             char a[] = D.toCharArray();        
             boolean in_word = false;
             int count=0;
-            for(char c:a) {
-                if(c ==' ')
-                {
-                    if (!in_word) { count++; in_word =true; }
-                    else { in_word=false;}          
+                for(char c:a) {
+                    if(c ==' ')
+                    {
+                        if (!in_word) { count++; in_word =true; }
+                        else { in_word=false;}          
+                    }
                 }
-            }
             System.out.println(count +" word(s) found " + a.length);
             } catch (Exception e){}
             System.out.println("Data Loaded.");            
