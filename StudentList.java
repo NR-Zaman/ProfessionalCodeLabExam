@@ -26,7 +26,7 @@ public class StudentList {
             System.out.println("Data Loaded.");
         }
 
-        else if (args[0].equals("r"))
+        else if (args[0].equals("r"))  // code  use for command r 
         {
             System.out.println("Loading data ...");        
             try {
@@ -55,8 +55,8 @@ public class StudentList {
 
                 // Date Formet df removed or commented
                 Date d = new Date();
-                // String df = "dd/mm/yyyy-hh:mm:ss a";
-                DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy-hh:mm:ss a";);
+                String df = "dd/mm/yyyy-hh:mm:ss a";
+                DateFormat dateFormat = new SimpleDateFormat(df);
                 String fd= dateFormat.format(d);
                 s.write("," +t+ "\nList last updated on"+fd);
                 s.close();
@@ -66,7 +66,7 @@ public class StudentList {
             // cann't make handaling case.
         }
 
-        else if(args[0].contains("?"))
+        else if(args[0].contains("?"))  // code  use for find a student
         {
             System.out.println("Loading Data ... ");
             try{
