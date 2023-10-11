@@ -7,18 +7,18 @@ public class StudentList {
     public static void main(String[]args){
         // check arguments
         // Aplication termineted and all bugs and debugs
-        
+
         if(args[0].equals("a"))
         {
             System.out.println("loading data ....");
             try {
-                BufferedReader s = new BufferedReader(
+                BufferedReader p = new BufferedReader(
                     new InputStreamReader(
                     new FileInputStream("students.txt") 
                     )
                 );
 
-                String r = s.readLine();
+                String r = p.readLine();
                 String i[] = r.split(","); 
                 for (String j:i) {System.out.println(j);}
             }
